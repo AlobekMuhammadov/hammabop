@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HammaBop Choyxonasi | Digital Menu</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- LOADER -->
+    <div class="loader" id="loader">
+        <div>
+            <div class="tea-cup"></div>
+            <h2 class="loader-text">HammaBop</h2>
+        </div>
+    </div>
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">
+                <div class="logo-container">
+                    <!-- ✅ Logotip o'lchami kattalashtirildi: 50px → 60px -->
+                    <img src="/media/logotip/logo.jpg" alt="HammaBop Logo" class="logo-image">
+                    <div class="logo-text">
+                        <!-- ✅ Font o'lchami kattalashtirildi: 2rem → 2.2rem -->
+                        <h1>HAMMABOP</h1>
+                        <!-- ✅ Tagline o'lchami kattalashtirildi: 0.65rem → 0.75rem -->
+                        <p class="tagline">Choyxona Menyusi</p>
+                    </div>
+                </div>
+            </div>
+            <div class="lang-switcher">
+                <button class="lang-btn active" onclick="changeLang('uz')">UZ</button>
+                <button class="lang-btn" onclick="changeLang('en')">EN</button>
+                <button class="lang-btn" onclick="changeLang('ru')">RU</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- CATEGORIES -->
+    <section class="categories" id="menu">
+        <h2 data-uz="Menyu Bo'limlari" data-en="Menu Categories" data-ru="Категории меню">Menyu Bo'limlari</h2>
+        <div class="category-grid">
+            <!-- "Hammasi" kategoriyasi -->
+            <div class="category-card active" onclick="filterCategory('all')" data-category="all">
+                <!-- Kategoriya fon rasmi -->
+                <div class="category-image">
+                    <img src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=400" alt="Hammasi" loading="lazy">
+                </div>
+                <!-- Qorong'u qoplama (textni o'qish qiyin bo'lmasligi uchun) -->
+                <div class="category-overlay"></div>
+                <!-- Kategoriya nomi -->
+                <div class="category-content">
+                    <h3 class="category-name" data-uz="Hammasi" data-en="All" data-ru="Все">Hammasi</h3>
+                </div>
+                <!-- Aktiv kategoriya belgisi -->
+                <div class="active-indicator">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M16.6667 5L7.50004 14.1667L3.33337 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+            </div>
+
+            <!-- "Taomlar" kategoriyasi -->
+            <div class="category-card" onclick="filterCategory('birinchi_taom')" data-category="birinchi_taom">
+                <div class="category-image">
+                    <!-- O'z rasmingizni qo'ying -->
+                    <img src="/media/bolimlar/shorva.jpg" alt="Taomlar" loading="lazy">
+                </div>
+                <div class="category-overlay"></div>
+                <div class="category-content">
+                    <h3 class="category-name" data-uz="1-TAOM" data-en="First Dishes" data-ru="Первые Блюда">1-TAOM</h3>
+                </div>
+                <div class="active-indicator">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M16.6667 5L7.50004 14.1667L3.33337 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+            </div>
+
+            <!-- "2-taom" kategoriyasi -->
+            <div class="category-card" onclick="filterCategory('ikkinchi_taom')" data-category="ikkinch_taom">
+                <div class="category-image">
+                    <!-- O'z rasmingizni qo'ying -->
+                    <img src="/media/bolimlar/osh.jpg" alt="Go'sht Taomlar" loading="lazy">
+                </div>
+                <div class="category-overlay"></div>
+                <div class="category-content">
+                    <h3 class="category-name" data-uz="2-TAOM" data-en="Second Dishes" data-ru="Второе Блюда">2-TAOM</h3>
+                </div>
+                <div class="active-indicator">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M16.6667 5L7.50004 14.1667L3.33337 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+            </div>
+
+
+            <!-- "Shashliklar" kategoriyasi -->
+            <div class="category-card" onclick="filterCategory('shashlik')" data-category="shashlik">
+                <div class="category-image">
+                    <!-- O'z rasmingizni qo'ying -->
+                    <img src="/media/bolimlar/shashlik.jpg" alt="Shashliklar" loading="lazy">
+                </div>
+                <div class="category-overlay"></div>
+                <div class="category-content">
+                    <h3 class="category-name" data-uz="Shashliklar" data-en="Shashliks" data-ru="Шашлыки">Shashliklar</h3>
+                </div>
+                <div class="active-indicator">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M16.6667 5L7.50004 14.1667L3.33337 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+            </div>
+
+
+            <!-- "salatlar" kategoriyasi -->
+            <div class="category-card" onclick="filterCategory('salat')" data-category="salat">
+                <div class="category-image">
+                    <!-- O'z rasmingizni qo'ying -->
+                    <img src="/media/bolimlar/salat.jpg" alt="Ichimliklar" loading="lazy">
+                </div>
+                <div class="category-overlay"></div>
+                <div class="category-content">
+                    <h3 class="category-name" data-uz="Salatlar" data-en="Salads" data-ru="Салаты">Salatlar</h3>
+                </div>
+                <div class="active-indicator">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M16.6667 5L7.50004 14.1667L3.33337 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+            </div>
+
+            <!-- "Asorti" kategoriyasi -->
+            <div class="category-card" onclick="filterCategory('asorti')" data-category="asorti">
+                <div class="category-image">
+                    <!-- O'z rasmingizni qo'ying -->
+                    <img src="/media/bolimlar/asorti.jpg" alt="Asorti" loading="lazy">
+                </div>
+                <div class="category-overlay"></div>
+                <div class="category-content">
+                    <h3 class="category-name" data-uz="Asorti" data-en="Assorted" data-ru="Ассорти">Assorti</h3>
+                </div>
+                <div class="active-indicator">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M16.6667 5L7.50004 14.1667L3.33337 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+            </div>
+
+            <!-- "Ichimliklar" kategoriyasi -->
+            <div class="category-card" onclick="filterCategory('ichimlik')" data-category="ichimlik">
+                <div class="category-image">
+                    <!-- O'z rasmingizni qo'ying -->
+                    <img src="/media/bolimlar/ichimliklar.jpg" alt="Ichimliklar" loading="lazy">
+                </div>
+                <div class="category-overlay"></div>
+                <div class="category-content">
+                    <h3 class="category-name" data-uz="Ichimliklar" data-en="Drinks" data-ru="Напитки">Ichimliklar</h3>
+                </div>
+                <div class="active-indicator">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M16.6667 5L7.50004 14.1667L3.33337 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+            </div>
+
+            <!-- "Pivo" kategoriyasi -->
+            <div class="category-card" onclick="filterCategory('pivo')" data-category="pivo">
+                <div class="category-image">
+                    <!-- O'z rasmingizni qo'ying -->
+                    <img src="/media/bolimlar/pivo.jpg" alt="Pivo" loading="lazy">
+                </div>
+                <div class="category-overlay"></div>
+                <div class="category-content">
+                    <h3 class="category-name" data-uz="Pivo" data-en="Beers" data-ru="Пиво">Pivo</h3>
+                </div>
+                <div class="active-indicator">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M16.6667 5L7.50004 14.1667L3.33337 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+            </div>
+
+
+            <!-- "Kolyan" kategoriyasi -->
+            <div class="category-card" onclick="filterCategory('kolyan')" data-category="kolyan">
+                <div class="category-image">
+                    <!-- O'z rasmingizni qo'ying -->
+                    <img src="/media/kolyan.jpg" alt="Pivo" loading="lazy">
+                </div>
+                <div class="category-overlay"></div>
+                <div class="category-content">
+                    <h3 class="category-name" data-uz="Kolyan" data-en="Kolyan" data-ru="Кольян">Kolyan</h3>
+                </div>
+                <div class="active-indicator">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M16.6667 5L7.50004 14.1667L3.33337 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- CATEGORY INFO SECTION -->
+    <section class="category-info" id="categoryInfo">
+        <div class="container">
+            <div class="category-info-content">
+                <!-- Tanlangan kategoriya nomi -->
+                <h2 class="category-title" id="categoryTitle" 
+                    data-uz="Barcha Taomlar" 
+                    data-en="All Dishes" 
+                    data-ru="Все блюда">
+                    Barcha Taomlar
+                </h2>
+                
+                <!-- Kategoriya tavsifi -->
+                <p class="category-description" id="categoryDescription"
+                data-uz="Hamma kategoriyalardagi mazali taomlar" 
+                data-en="Delicious dishes from all categories" 
+                data-ru="Вкусные блюда из всех категорий">
+                Hamma kategoriyalardagi mazali taomlar
+                </p>
+                
+                <!-- Ovqatlar soni -->
+                <div class="items-count">
+                    <span class="count-number" id="itemsCount">0</span>
+                    <span class="count-text" 
+                        data-uz="taom" 
+                        data-en="items" 
+                        data-ru="блюд">
+                        taom
+                    </span>
+                </div>
+            </div>
+            
+            <!-- Dekorativ chiziq -->
+            <div class="divider-line"></div>
+        </div>
+    </section>
+
+
+
+
+    <!-- MENU ITEMS -->
+    <section class="menu-section" id="menuSection">
+        <div class="menu-grid" id="menuGrid"></div>
+    </section>
+
+    <!-- SCROLL TO TOP BUTTON -->
+    <button class="scroll-to-top" id="scrollToTop" title="Yuqoriga chiqish">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 20L12 4M12 4L5 11M12 4L19 11" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>

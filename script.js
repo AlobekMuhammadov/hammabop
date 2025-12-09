@@ -8,15 +8,9 @@ const menuData = {
             img: "/media/ilik_shurva.jpg"
         },
         {
-<<<<<<< HEAD
-            uz: {name: "Chuchvara", desc: "Xamir taom", price: "25,000"},
-            en: {name: "Chuchvara", desc: "Dough dish", price: "25,000"},
-            ru: {name: "Чучвара", desc: "Мучное блюдо", price: "25,000"},
-=======
             uz: {name: "Chuchvara", desc: "Xamir taom", price: "30,000"},
             en: {name: "Chuchvara", desc: "Dough dish", price: "30,000"},
             ru: {name: "Чучвара", desc: "Мучное блюдо", price: "30,000"},
->>>>>>> c609677 (o'zbegim, kucha, chuchvara, mastava ovqatlari narxi o'zgardi)
             img: "/media/chuchvara.jpg"
         },
         {
@@ -26,17 +20,6 @@ const menuData = {
             img: "/media/lagman.jpg"
         },
         {
-<<<<<<< HEAD
-            uz: {name: "Mastava", desc: "Guruchli sho'rva 1pors", price: "25,000"},
-            en: {name: "Mastava", desc: "Soup with rice 1pors", price: "25,000"},
-            ru: {name: "Мастава", desc: "Суп с рисом 1pors", price: "25,000"},
-            img: "/media/mastava.jpg"
-        },
-        {
-            uz: {name: "Kucha", desc: "Xamir taom", price: "25,000"},
-            en: {name: "Kucha", desc: "Dough dish", price: "25,000"},
-            ru: {name: "Куча", desc: "Мучное блюдо", price: "25,000"},
-=======
             uz: {name: "Mastava", desc: "Guruchli sho'rva 1pors", price: "30,000"},
             en: {name: "Mastava", desc: "Soup with rice 1pors", price: "30,000"},
             ru: {name: "Мастава", desc: "Суп с рисом 1pors", price: "30,000"},
@@ -46,7 +29,6 @@ const menuData = {
             uz: {name: "Kucha", desc: "Xamir taom", price: "30,000"},
             en: {name: "Kucha", desc: "Dough dish", price: "30,000"},
             ru: {name: "Куча", desc: "Мучное блюдо", price: "30,000"},
->>>>>>> c609677 (o'zbegim, kucha, chuchvara, mastava ovqatlari narxi o'zgardi)
             img: "/media/kocha.jpg"
         },
         {
@@ -238,15 +220,9 @@ const menuData = {
             img: "/media/chuponcha.jpg"
         },
         {
-<<<<<<< HEAD
-            uz: {name: "O'zbekim 2 (2 kg)", desc: "Maxsus taom 2 kg", price: "500,000"},
-            en: {name: "O'zbekim 2 (2 kg)", desc: "Special dish 2 kg", price: "500,000"},
-            ru: {name: "Узбегим 2 (2кг)", desc: "Специальное блюдо 2 кг", price: "500,000"},
-=======
             uz: {name: "O'zbekim 2 (2 kg)", desc: "Maxsus taom 2 kg", price: "520,000"},
             en: {name: "O'zbekim 2 (2 kg)", desc: "Special dish 2 kg", price: "520,000"},
             ru: {name: "Узбегим 2 (2кг)", desc: "Специальное блюдо 2 кг", price: "520,000"},
->>>>>>> c609677 (o'zbegim, kucha, chuchvara, mastava ovqatlari narxi o'zgardi)
             img: "/media/ozbegim2.jpg"
         },
         {
